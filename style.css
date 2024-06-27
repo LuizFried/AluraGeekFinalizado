@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaria-color: #FFFFFF;
+    --hover-color: #e74c3c;
+    --backg-color: #5D04d9;
+    --secundaria-color: #03318C;
+
+    --font-2p: 'Press Start 2P', system-ui;
+    --font-ibm: "IBM Plex Mono", monospace;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 6rem;
+    background-color: var(--backg-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    overflow-x: hidden; 
+}
+
+.add_produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 26.8rem;
+    max-width: 100%;
+    height: 32.3rem;
+    gap: 2.5rem;
+    margin-top: 2rem;
+    padding: 40px;
+}
+
+h1 {
+    font-family: var(--font-2p);
+    font-size: 24px;
+}
+
+input {
+    margin: 1px;
+    width: 21.8rem;
+    height: 3.6rem;
+    border: 2px solid #ccc;
+    border-radius: 250px;
+    margin-bottom: 10px;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-color: var(--secundaria-color);
+    font-family: var(--font-ibm);
+    font-weight: 600;
+    color: var(--secundaria-color);
+}
+
+.div_btn {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.btn_guardar, .btn_limpar {
+    width: 10.1rem;
+    height: 3.4rem;
+    border-radius: 15px;
+    font-family: var(--font-ibm);
+    font-size: medium;
+    font-weight: 20px;
+}
+
+.btn_guardar:hover, .btn_limpar:hover, input:hover, .ancora__GitHub:hover {
+    border-color: var(--hover-color);
+    color: var(--hover-color);
+}
+
+.btn_guardar {
+    background-color: var(--secundaria-color);
+    color: var(--primaria-color);
+}
+
+.btn_limpar {
+    background-color: var(--primaria-color);
+    color: var(--secundaria-color);
+}
+
+.bloco_produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 4rem;
+    margin-top: 2rem;
+    overflow-x: hidden; 
+    box-sizing: border-box;
+}
+
+.container_produtos {
+    width: 100%;
+    max-width: 52rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); 
+    gap: 1rem;
+    overflow-y: auto; 
+    max-height: 70vh; 
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: var(--primaria-color);
+    border: 2px solid var(--secundaria-color);
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; 
+    object-fit: contain; 
+    border-radius: 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 10.5rem;
+    background-color: var(--backg-color);
+}
+
+a {
+    color: white;
+}
+
+/* PlaceHolder */
+::placeholder {
+    font-family: var(--font-ibm);
+    font-weight: 600;
+    color: var(--secundaria-color);
+}
+
+@media (max-width: 430px) {
+    .container_produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .add_produto, .container_produtos {
+        padding: 0 1rem;
+    }
+
+    input {
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 431px) {
+    main {
+        flex-direction: row-reverse;
+        column-gap: 10rem;
+    }
+
+    .add_produto {
+        width: auto;
+        height: auto;
+    }
+}

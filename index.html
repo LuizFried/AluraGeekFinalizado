@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Geek</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img class="imagem__topo" src="img/Logo.png" alt="Alura geek">
+    </header>
+
+    <main>
+        <form class="add_produto">
+            <h1>Adicionar<br> Produto:</h1>
+            <input id="input_nome" type="text" name="nome" placeholder="Nome...">
+            <input id="input_preco" type="text" name="preco" placeholder="Preço...">
+            <input id="input_url" type="text" name="imagem" placeholder="URL da imagem...">
+
+            <div class="div_btn">
+                <button class="btn_guardar" type="submit">Guardar</button>
+                <button class="btn_limpar" type="reset">Limpar</button>
+            </div>
+        </form>
+        <div class="bloco_produtos">
+            <h1>Meus<br>Produtos</h1>
+            <div class="container_produtos"></div>
+        </div>
+    </main>
+
+    <footer>
+        <img class="imagem_inferior" src="img/AluraGeekTopSide.png" alt="Alura geek">
+        <a class="ancora__GitHub" href="https://github.com/LuizFried" target="_blank">Desenvolvido por Luiz Felipe</a>
+    </footer>
+</body>
+</html>
